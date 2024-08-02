@@ -1,0 +1,28 @@
+body {
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.notcenter {
+	text-align: left;
+}
+
+a {
+	color: #7070f0;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #1111a6;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #7070f0;
+	text-decoration: none;
+}
+
+a:visited:hover {
+	color: #1111a6;
+	text-decoration: underline;
+}

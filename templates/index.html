@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+	<link rel="icon" type="image/x-icon" href="{{url_for('static', filename='favicon.ico')}}">
+	<title>Cheapest Pokemon Card</title>
+</head>
+<body>
+	<h1>Cheapest Pokemon Card</h1>
+	<p>Get the cheapest listing of a Pokemon card on eBay!</p>
+	<p>Applies filters to remove digital/PTCGO listings!</p>
+	<input name="cardname" placeholder="Pokemon Card" id="cardname"/>
+	<input type="submit" onClick="searchfunc()" value="Search" id="searchbutton"/>
+	<br><br><small><b>Note: </b>You cannot put a <code>/</code> character in your search box</small>
+	<p>{{warning|safe}}</p>
+	<div class="notcenter" style="margin-left:5px;">
+		<h2>FAQ</h2>
+		<h4>Why am I not getting the card I searched for/a random card?</h4>
+		<p>This website scrapes eBay (a.k.a uses a bot that types the search into eBay) and then returns the first listing when sorted by prices lowest first. If you are getting a random card, it is because that is the cheapest card eBay returned. Try narrowing down you search, like <code>Raichu GX 29/73 Shining Legends NM</code> instead of just something like <code>Raichu GX</code> or <code>Raichu card</code>.</p>
+		<small><b>Hint: </b> you can also use regular eBay filters, example search: <code>raichu gx -mp -damaged</code> to filter out all Raichu GX listings with <code>mp</code> or <code>damaged</code> in the listing title.</small>
+		<h4>Why is the website not working?</h4>
+		<p>Report bugs to <a target="_blank" href="mailto:wang.da@wcs-g.com?subject=Bug In Cheapest Pokemon Card Site&body=Bug in Cheapest Pokemon Card Site: <enter bug report here>">ThePeeps191</a></p>
+	</div>
+	<script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+</html>
